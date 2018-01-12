@@ -71,3 +71,9 @@ From: nvidia/cuda:8.0-cudnn5-devel-ubuntu16.04
 
 %test
 	#Test that script is a success
+
+	#Load environment variables
+	. /environment
+
+	#Test tensorflow install
+	python -c "import tensorflow"
