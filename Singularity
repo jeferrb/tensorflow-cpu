@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: nvidia/cuda:8.0-cudnn5-devel-ubuntu16.04
+From: nvidia/cuda:8.0-cudnn6-devel-ubuntu14.04
 
 %environment
 
@@ -7,10 +7,6 @@ From: nvidia/cuda:8.0-cudnn5-devel-ubuntu16.04
 
 	#Use bash as default shell
 	SHELL=/bin/bash
-
-	#Add nvidia driver paths
-	PATH="/nvbin:$PATH"
-	LD_LIBRARY_PATH="/nvlib;$LD_LIBRARY_PATH"
 
 	#Add CUDA paths
 	CPATH="/usr/local/cuda/include:$CPATH"
@@ -38,9 +34,6 @@ From: nvidia/cuda:8.0-cudnn5-devel-ubuntu16.04
 	#Default mount paths
 	mkdir /scratch /data /shared /fastdata
 
-	#Nvidia Library mount paths
-	mkdir /nvlib /nvbin
-
 
   #Updating and getting required packages
   apt-get update
@@ -57,9 +50,8 @@ From: nvidia/cuda:8.0-cudnn5-devel-ubuntu16.04
   ./Anaconda3-4.2.0-Linux-x86_64.sh -b -p $CONDA_INSTALL_PATH
 
 
-  #Install Tensorflow
-  TF_PYTHON_URL="https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.1-cp35-cp35m-linux_x86_64.whl"
-  pip install --ignore-installed --upgrade $TF_PYTHON_URL
+  #Install Tensorflow CPU
+  pip install tensorflow
 
 	#Install Keras
 	pip install keras
