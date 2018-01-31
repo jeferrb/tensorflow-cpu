@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: nvidia/cuda:8.0-cudnn6-devel-ubuntu14.04
+From: nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
 
 %environment
 
