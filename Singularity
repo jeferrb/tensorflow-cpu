@@ -56,9 +56,9 @@ From: nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
 	#Install Keras
 	pip install keras
 	pip install gensim
-	pip install -U scikit-learn
-	python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 	pip install https://pypi.python.org/packages/source/n/nltk/nltk-3.2.1.tar.gz
+	conda install nomkl numpy scipy scikit-learn numexpr matplotlib ipython jupyter pandas sympy nose
+	conda remove mkl mkl-service
 
 
 %runscript
