@@ -55,6 +55,7 @@ From: nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
 
 	#Install Keras
 	pip install keras
+	pip install gensim
 
 %runscript
 	#Executes with the singularity run command
