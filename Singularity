@@ -74,3 +74,4 @@ From: nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
 
 	#Test tensorflow install
 	python -c "import tensorflow"
+	python -c "import gensim"
