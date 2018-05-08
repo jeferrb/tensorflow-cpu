@@ -37,7 +37,7 @@ From: nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
 
   #Updating and getting required packages
   apt-get update
-  apt-get install -y wget git vim
+  apt-get install -y wget git vim python python3
 
   #Creates a build directory
   mkdir build
@@ -56,6 +56,10 @@ From: nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
 	#Install Keras
 	pip install keras
 	pip install gensim
+	pip install -U scikit-learn
+	python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+	pip install https://pypi.python.org/packages/source/n/nltk/nltk-3.2.1.tar.gz
+
 
 %runscript
 	#Executes with the singularity run command
