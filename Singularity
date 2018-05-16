@@ -54,12 +54,13 @@ From: nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
   pip install tensorflow
 
 	#Install Keras
-	pip install keras
-	pip install gensim
+	pip install --update keras
+	pip install --update gensim
+	pip install --update pip
+	pip install --update dask
 	pip install https://pypi.python.org/packages/source/n/nltk/nltk-3.2.1.tar.gz
 	conda install nomkl numpy scipy scikit-learn numexpr matplotlib ipython jupyter pandas sympy nose
 	conda remove mkl mkl-service
-
 
 %runscript
 	#Executes with the singularity run command
