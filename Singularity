@@ -59,7 +59,7 @@ From: nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
 	pip install --upgrade gensim
 	pip install --upgrade dask
 	pip install https://pypi.python.org/packages/source/n/nltk/nltk-3.2.1.tar.gz
-	conda install nomkl numpy scipy scikit-learn numexpr matplotlib ipython jupyter pandas sympy nose
+	conda install nomkl numpy scipy scikit-learn numexpr matplotlib.pyplot ipython jupyter pandas sympy nose
 	conda remove mkl mkl-service
 
 %runscript
